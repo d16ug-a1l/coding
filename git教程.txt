@@ -1,0 +1,53 @@
+sudo add-apt-repository ppa:git-core/ppa        添加最新的git源
+sudo apt-get install git        安装git
+git init        指定当前的库为工作目录
+git add <file>      添加文件到工作区
+git commit -m <message>     提交工作区的文件到库中
+使用 git add 命令将想要快照的内容写入缓存区，
+使用 git commit命令则将缓存区内容添加到仓库中。
+git status      查看版本库的状态
+git diff        查看修改的文件
+git log     查看版本库的状态
+git reset --hard <log中的版本数字>      回退到指定版本
+git reflog
+git diff HEAD -- 文件名
+git checkout -- 文件名      用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。
+git reset HEAD~数字 文件名
+git rm 文件名       在版本库里删除文件
+ssh-keygen -t rsa -C "2948777534@qq.com"
+git remote add origin https://github.com/lipeng2024/coding.git    必须在自己的git工作目录下执行
+git push -u origin master
+git push origin master      只要本地作了提交，就可以通过命令，把本地master分支的最新修改推送至GitHub
+git branch      查看分支
+git branch <name>       创建分支
+git checkout <name>或者git switch <name>        切换分支
+git checkout -b <name>或者git switch -c <name>      创建+切换分支
+git merge <name>        快速合并某分支到当前分支
+git branch -d <name>        删除分支
+git log --graph <--pretty=oneline --abbrev-commit>        可以看到分支合并图
+git merge --no-ff -m "merge with no-ff" 分支名      普通模式合并分支
+git stash       保存现在的工作内容
+git stash apply     恢复后，stash内容并不删除
+git stash drop      删除stash中的内容
+git stash pop       恢复的同时把stash内容也删
+git stash list      查看恢复区的保存的内容
+git stash apply stash@{0}       恢复到stash list中的指定版本
+git cherry-pick     不会
+git branch -D 分支名        强制删除某一分支
+git remote      查看远程库的情况
+git remote -v       查看远程库的详细情况
+git push origin master      推送本地的master分支
+git push origin dev     推送本地的dev分支
+git pull        抓取远程的新提交
+git clone git@github.com:lipeng2024/root.git        克隆远程的库
+git checkout -b dev origin/dev      创建远程origin的dev分支到本地
+git branch --set-upstream-to=origin/dev dev     设置dev和origin/dev的链接
+git branch --set-upstream branch-name origin/branch-name        建立本地分支和远程分支的关联
+git push origin <tagname>       可以推送一个本地标签
+git push origin --tags      可以推送全部未推送过的本地标签
+git tag -d <tagname>        可以删除一个本地标签
+git push origin :refs/tags/<tagname>        可以删除一个远程标签
+git config --global color.ui true       git会适当地显示不同的颜色
+
+
+
